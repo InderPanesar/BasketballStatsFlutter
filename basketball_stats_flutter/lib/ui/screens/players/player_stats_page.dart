@@ -37,6 +37,7 @@ class PlayerStatsPage extends StatelessWidget {
                   SizedBox(height: 10,),
                   Padding(
                       padding: EdgeInsets.only(left: 20),
+                      //ToDo: Make bio widget after implementing api calls.
                       child: SelectableText("Bio", style: TextStyle( fontSize: 40, color: AppColors.shark, fontFamily: 'Bw Beto Grande')),
                   )
                 ],
