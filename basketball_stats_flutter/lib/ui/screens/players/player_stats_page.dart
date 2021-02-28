@@ -153,7 +153,7 @@ class PlayerStatsPageState extends State<PlayerStatsPage> {
 
   Widget statTitle(String title) {
     return SizedBox(
-      height: 40,
+      height: 41,
       child: Row(
         children: [
           Expanded(
@@ -178,7 +178,7 @@ class PlayerStatsPageState extends State<PlayerStatsPage> {
 
   Widget statSubtitle(String subtitle, String abbreviate) {
     return SizedBox(
-      height: 12,
+      height: 13,
       child: Row(
         children: [
           Expanded(
