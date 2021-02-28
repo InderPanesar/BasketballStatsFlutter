@@ -12,11 +12,11 @@ class PlayerStatsLocation extends BeamLocation {
   );
 
   @override
-  List<String> get pathBlueprints => [PlayerStatsLocationPage.path];
+  List<String> get pathBlueprints => [PlayerStatsPage.path];
 
   @override
   List<BeamPage> get pages => [
     TempPage.beamLocation,
-    if(pathBlueprint.contains("player")) PlayerStatsLocationPage.beamLocation,
+    if(pathBlueprint.contains("player")) PlayerStatsPage.beamLocation,
   ];
 }

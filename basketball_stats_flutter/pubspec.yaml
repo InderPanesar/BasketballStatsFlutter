@@ -28,6 +28,10 @@ dependencies:
   bloc: ^6.1.1
   flutter_bloc: ^6.1.1
   beamer: ^0.7.0
+  transparent_image: ^1.0.0
+  auto_size_text: ^2.1.0
+
+
 
 
 
@@ -68,5 +72,7 @@ flutter:
     - family: Bw Beto Grande
       fonts:
         - asset: fonts/Bw Beto Grande Regular.otf
+        - asset: fonts/Bw Beto Grande Bold.ttf
+          weight: 600
 
 
