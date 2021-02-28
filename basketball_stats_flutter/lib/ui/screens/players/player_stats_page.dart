@@ -36,7 +36,7 @@ class PlayerStatsPageState extends State<PlayerStatsPage> {
               child:
 
               Column(
-
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
                     clipBehavior: Clip.none,
@@ -66,9 +66,9 @@ class PlayerStatsPageState extends State<PlayerStatsPage> {
                   SizedBox(height: 10,),
 
                   Padding(
-                    padding: EdgeInsets.only(left: 20),
+                    padding: EdgeInsets.only(left: 20 * scaleValueWidth()),
                     //ToDo: Make bio widget after implementing api calls.
-                    child: SelectableText("Bio", style: TextStyle( fontSize: 40, color: AppColors.shark, fontFamily: 'Bw Beto Grande')),
+                    child: SelectableText("Bio", style: TextStyle( fontSize: 30, color: AppColors.shark, fontFamily: 'Bw Beto Grande')),
                   )
                 ],
               )
@@ -100,7 +100,7 @@ class PlayerStatsPageState extends State<PlayerStatsPage> {
                     child: FittedBox(
                         fit: BoxFit.fitWidth,
                         child: Text(
-                          "Giannis\nAntetokounmpo",
+                          "Dennis\nSchroder",
                           style: TextStyle(
                             color: AppColors.shark,
                             fontFamily: 'Bw Beto Grande',
@@ -112,9 +112,9 @@ class PlayerStatsPageState extends State<PlayerStatsPage> {
                   ),
                   SizedBox(height: 20,),
                   Container(
-                    width: MediaQuery.of(context).size.width - (MediaQuery.of(context).size.width/1.7) - 50,
+                    width: MediaQuery.of(context).size.width - (MediaQuery.of(context).size.width/1.7) - 50 - (20 * scaleValueWidth() - 20),
                     child: Padding(
-                      padding: EdgeInsets.only(left:10),
+                      padding: EdgeInsets.only(left:20),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -212,8 +212,7 @@ class PlayerStatsPageState extends State<PlayerStatsPage> {
     if (kIsWeb) {
       return AppBar(
         automaticallyImplyLeading: false,
-        leading: Navigator.canPop(context) ? TextButton(
-            child:  Padding(
+        leading: Navigator.canPop(context) ? Padding(
                 padding: EdgeInsets.only(left: 10),
                 child: FittedBox(
                   child: TextButton(
@@ -227,7 +226,6 @@ class PlayerStatsPageState extends State<PlayerStatsPage> {
                   ),
                   onPressed: () => Navigator.pop(context),
             ),
-                )
 
             )
 
